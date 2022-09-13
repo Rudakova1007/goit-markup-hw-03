@@ -23,9 +23,10 @@ h2,
 h3, 
 h4, 
 h5, 
-h6, 
-p, 
-ul {
+h6,
+ul, 
+p 
+ {
     margin: 0;
 }
 
@@ -52,6 +53,11 @@ ul {
     border-bottom: 1px solid var(--header-border-color);
     background-color:var(--header-text-color);
     font-weight: 500;
+}
+
+img {
+    display: block;
+    max-width: 100%;
 }
 
 .container {
@@ -109,9 +115,8 @@ ul {
     text-decoration: none;
     display: block;
     color: var(--primary-text-color);
-    letter-spacing: 0.02em;
-    line-height: 1.14;
     padding-top: 32px;
+    letter-spacing: 0.02em;
     padding-bottom: 32px;
 }
 
@@ -149,10 +154,14 @@ ul {
 
 /* Hero */
 
-.hero-wrapper {
-    padding-top: 0;
-    padding-bottom: 0;
-    text-align: center;   
+.hero-wrapper {  
+    max-width: 696px; 
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center; 
+    
 }
 
 .hero {
@@ -163,13 +172,14 @@ ul {
 }
 
 .hero-title {
+    display: inline-block;
     margin-bottom: 30px;
     color: var(--header-text-color);
     font-size: 44px;
     line-height: 1.36;
     font-weight: 900;
     letter-spacing: 0.06em;
-    text-transform: uppercase; 
+    text-transform: uppercase;
 }
 
 
@@ -182,6 +192,7 @@ ul {
 
 .button-primary {
     display: inline-block;
+    border: 1px solid transparent;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     padding: 10px 32px;
@@ -193,6 +204,7 @@ ul {
     line-height: 1.87;
     font-weight: 700;
     color: var(--main-block-text-color);
+ 
 }
 
 /* Features */
@@ -209,14 +221,21 @@ ul {
     display: flex;
 }
 
+.team-item {
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
 .img-list .img-item + .img-item {
     margin-left: 30px;
 }
 
 .description-title {
+    display: block;
+    margin-bottom: 10px;
     font-weight: 700;
     font-size: 14px;
-    line-height: 1.14;
+    line-height: 1.71px;
     letter-spacing: 0.03em;
 }
 
@@ -224,7 +243,6 @@ ul {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    color: var(--secondary-text-color);
 }
 
 /* Our team */
@@ -232,16 +250,21 @@ ul {
 .team-list {
     display: flex;
 }
+ 
+.feature-item {
+    max-width: 270px;
+}
 
 .team-list .worker-item + .worker-item {
-    background-color: var(--main-block-text-color);
     margin-left: 30px;
 }
+
 
 .worker-item {
     text-align: center;
     box-shadow:  0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
     border-radius: 0px 0px 4px 4px;
+    background-color: var(--main-block-text-color);
 }
 
 .section-worker {
@@ -249,16 +272,13 @@ ul {
 }
 
 .worker-title {
+    padding-top: 30px;
+    padding-bottom: 10px;
     font-weight: 500;
-    margin-bottom: 10px;
 }
 
-.team-list-img {
-    margin-bottom: 30px;
-}
 
 .worker-description {
-    padding-bottom: 30px;
     font-size: 16px;
     line-height: 1.18;
     letter-spacing: 0.03em;
@@ -267,7 +287,7 @@ ul {
 
 .title {
     text-align: center;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
     font-size: 36px;
     line-height: 1.16;
     letter-spacing: 0.03em;
@@ -327,8 +347,8 @@ ul {
     color: var(--footer-text-color);
   }
 
-  .footer-list-item {
-    padding-bottom: 9px;
+  .footer-list-item:not(:last-child) {
+    margin-bottom: 9px;
   }
 
 /* Portfolio */
@@ -365,13 +385,15 @@ background-color: var(--accent-color);
 }
 
 .item-title {
+    margin-bottom: 4px;
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.06em
     }
 
 .item-description {
+    color: var(--secondary-text-color);
     font-weight: 400;
     font-size: 16px;
     line-height: 1.87;
