@@ -383,6 +383,7 @@ img {
 .navigation-buttons button:hover,
 .navigation-buttons button:focus {
 background-color: var(--accent-color);
+color: var(--main-block-text-color);
 }
 
 .item-title {
